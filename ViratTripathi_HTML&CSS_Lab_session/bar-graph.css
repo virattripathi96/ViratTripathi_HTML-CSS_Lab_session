@@ -1,0 +1,84 @@
+body {
+    text-align: center;
+}
+
+.bar-graph-outer-section {
+    padding: 10px;
+    background-color: lightgray;
+    display: inline-block;
+    margin-top: 10%;
+}
+
+.bar-graph-inner {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.bar-graph {
+    width: 35px;
+    height: 300px;
+    background-color: white;
+    position: relative;
+}
+
+[class^="bar-graph-full"] {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    z-index: 1;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+}
+
+.bar-graph-full-30 {
+    animation-name: bar-graph-30;
+}
+
+@keyframes bar-graph-30 {
+    from {
+        background-color: white;
+        height: 0%
+    }
+    to {
+        background-color: grey;
+        height: 30%
+    }
+}
+
+.bar-graph-full-40 {
+    animation-name: bar-graph-40;
+}
+
+@keyframes bar-graph-40 {
+    from {
+        background-color: white;
+        height: 0%
+    }
+    to {
+        background-color: grey;
+        height: 40%
+    }
+}
+
+.bar-graph-full-80 {
+    animation-name: bar-graph-80;
+}
+
+@keyframes bar-graph-80 {
+    from {
+        background-color: white;
+        height: 0%
+    }
+    to {
+        background-color: grey;
+        height: 80%
+    }
+}
+
+.bar-graph + div > p {
+    text-align: center;
+}
